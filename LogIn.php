@@ -75,9 +75,12 @@
                         echo("</center>");
                         return;
                     }
-                    if($users[$index]["Password"]==$password)
+                    if($users[$index]["Password"]==$password){
                         $_SESSION["username"] = $username;
-                    else{
+                        header("location","Index.php");
+                    }
+                    else
+                    {
                         fclose($fusers);
                         echo("<center>");
                         echo("<h1 id='err'>Username or Password not correct</h1>");

@@ -34,7 +34,8 @@
         main();
         function main()
         {
-            $file = fopen("Messages.txt","r+");
+            $DirPath="";
+            $file = fopen($DirPath."Notes.txt","r+");
             $content = json_decode(fread($file,10000),true);
             for($i=0;$i<sizeof($content);$i++)
             {
